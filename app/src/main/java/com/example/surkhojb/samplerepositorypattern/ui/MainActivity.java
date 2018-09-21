@@ -1,7 +1,9 @@
-package com.example.surkhojb.samplerepositorypattern;
+package com.example.surkhojb.samplerepositorypattern.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.surkhojb.samplerepositorypattern.R;
 
 public class MainActivity extends AppCompatActivity {
 
