@@ -31,6 +31,8 @@ dependencies {
     //Gson for parse json from Retrofit to Java
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //Httploggin interceptor to log the request and the net responses
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     //Room database for local persistence
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
