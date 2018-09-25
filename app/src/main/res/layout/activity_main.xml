@@ -17,6 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:onClick="loadPosts"
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
 
     <Button
@@ -30,6 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_load_posts"
+        android:onClick="loadUsers"
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
 
     <Button
@@ -43,6 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_load_users"
+        android:onClick="loadAlbums"
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
 
     <Button
@@ -56,6 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_load_albums"
+        android:onClick="loadPhotos"
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
 
     <Button
@@ -69,6 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_load_photos"
+        android:onClick="loadComments"
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
 
     <Button
@@ -82,5 +87,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_load_comments"
+        android:onClick="loadTodos"
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
 </android.support.constraint.ConstraintLayout>
