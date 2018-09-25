@@ -2,6 +2,7 @@ package com.example.surkhojb.samplerepositorypattern;
 
 import android.app.Application;
 
+import com.example.surkhojb.samplerepositorypattern.data.remote.JsonPlaceHolderApi;
 import com.example.surkhojb.samplerepositorypattern.data.remote.RetrofitPlaceHolderService;
 
 /**
@@ -20,7 +21,7 @@ public class MyApplication extends Application {
 
     }
 
-    public static RetrofitPlaceHolderService getRetrofitPlaceHolderService(){
-        return retrofitPlaceHolderService;
+    public static JsonPlaceHolderApi getRetrofitPlaceHolderService(){
+        return retrofitPlaceHolderService.getService();
     }
 }

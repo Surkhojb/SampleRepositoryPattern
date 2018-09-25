@@ -45,11 +45,12 @@ public class RetrofitPlaceHolderService {
 
         retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl(BASE_URL)
                 .client(client)
                 .build();
     }
 
-    public static JsonPlaceHolderApi getService(){
+    public JsonPlaceHolderApi getService(){
         return retrofit.create(JsonPlaceHolderApi.class);
     }
 }
