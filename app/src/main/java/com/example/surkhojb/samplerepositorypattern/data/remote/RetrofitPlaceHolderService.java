@@ -17,12 +17,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitPlaceHolderService {
 
     private final String BASE_URL = "https://jsonplaceholder.typicode.com/";
+    private static RetrofitPlaceHolderService INSTANCE = null;
+    private static Retrofit retrofit;
 
-    public RetrofitPlaceHolderService() {
-
+    private RetrofitPlaceHolderService() {
+        createService();
     }
 
-    public JsonPlaceHolderApi createService(){
+    public static RetrofitPlaceHolderService getInstance(){
+
+        if(null == INSTANCE){
+            INSTANCE = new RetrofitPlaceHolderService();
+        }
+
+        return INSTANCE;
+    }
+
+    public void createService(){
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -32,12 +43,13 @@ public class RetrofitPlaceHolderService {
 
         Gson gson = new GsonBuilder().create();
 
-        Retrofit retrofit = new Retrofit.Builder()
+        retrofit = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
                 .build();
+    }
 
+    public static JsonPlaceHolderApi getService(){
         return retrofit.create(JsonPlaceHolderApi.class);
-
     }
 }
