@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SampleRepositoryPattern</string>
+    <string name="btn_load_posts">Load posts</string>
+    <string name="btn_load_users">Load users</string>
+    <string name="btn_load_albums">Load albums</string>
+    <string name="btn_load_photos">Load photos</string>
+    <string name="btn_load_comments">Load comments</string>
+    <string name="btn_load_todos">Load todos</string>
 </resources>
