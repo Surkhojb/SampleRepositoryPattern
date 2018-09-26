@@ -7,4 +7,5 @@
     <string name="btn_load_comments">Load comments</string>
     <string name="btn_load_todos">Load todos</string>
     <string name="title_activity_users">UsersActivity</string>
+    <string name="error_loading_pots">Error: We can\'t load post from server,try it later.</string>
 </resources>
