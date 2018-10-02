@@ -8,8 +8,6 @@ import android.widget.Toast;
 
 import com.example.surkhojb.samplerepositorypattern.MyApplication;
 import com.example.surkhojb.samplerepositorypattern.R;
-import com.example.surkhojb.samplerepositorypattern.data.remote.JsonPlaceHolderApi;
-import com.example.surkhojb.samplerepositorypattern.data.remote.RetrofitPlaceHolderService;
 import com.example.surkhojb.samplerepositorypattern.data.repository.AppRepository;
 import com.example.surkhojb.samplerepositorypattern.domain.Post;
 
@@ -29,7 +27,7 @@ public class PostsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_posts);
 
         initView();
-        loadPostsFromRemote();
+        loadPostsFromRepo();
     }
 
     private void initView(){
@@ -40,7 +38,7 @@ public class PostsActivity extends AppCompatActivity {
         rvListPosts.setAdapter(adapter);
     }
 
-    private void loadPostsFromRemote(){
+    private void loadPostsFromRepo(){
         AppRepository repository = MyApplication.getRepository();
         repository.getListOfPosts().enqueue(new Callback<List<Post>>() {
             @Override

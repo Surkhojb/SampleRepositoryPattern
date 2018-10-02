@@ -8,4 +8,8 @@
     <string name="btn_load_todos">Load todos</string>
     <string name="title_activity_users">UsersActivity</string>
     <string name="error_loading_pots">Error: We can\'t load post from server,try it later.</string>
+    <string name="error_loading_users">Error: We can\'t load users from server,try it later.</string>
+    <string name="user_name">Name: </string>
+    <string name="user_nickname">Username: </string>
+    <string name="user_email">E-mail: </string>
 </resources>
