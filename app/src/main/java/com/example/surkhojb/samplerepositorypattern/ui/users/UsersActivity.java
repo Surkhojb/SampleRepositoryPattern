@@ -38,7 +38,7 @@ public class UsersActivity extends AppCompatActivity implements UsersAdapterClic
 
     @Override
     public void onUserClicked(int position) {
-        Toast.makeText(this, "Item clicked at: " + position,Toast.LENGTH_SHORT).show();
+        UserDetailActivity.start(this,usersAdapter.getUserAtPosition(position));
     }
 
     private void initView() {

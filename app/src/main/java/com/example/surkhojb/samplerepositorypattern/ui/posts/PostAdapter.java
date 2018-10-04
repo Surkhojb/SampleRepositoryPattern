@@ -12,7 +12,6 @@ import com.example.surkhojb.samplerepositorypattern.domain.Post;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by Juanjo Berenguer.
@@ -35,7 +34,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
             notifyDataSetChanged();
         }
-
     }
 
     @NonNull

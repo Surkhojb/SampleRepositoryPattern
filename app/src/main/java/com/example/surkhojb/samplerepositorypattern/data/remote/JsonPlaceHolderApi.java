@@ -11,6 +11,9 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by Juanjo Berenguer.
@@ -37,5 +40,8 @@ public interface JsonPlaceHolderApi {
 
     @GET("/users")
     Call<List<User>> getListOfUsers();
+
+    @GET("posts/")
+    Call<List<Post>> getPotsByUser(@Query("userId") int userId);
 
 }

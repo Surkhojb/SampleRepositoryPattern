@@ -3,13 +3,15 @@ package com.example.surkhojb.samplerepositorypattern.domain;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by Juanjo Berenguer.
  * Email: surkhojb@gmail.com.
  * Date: 24/9/18.
  */
 
-public class User {
+public class User implements Serializable {
 
     @SerializedName("id")
     @Expose
@@ -108,7 +110,7 @@ public class User {
     }
 }
 
-class Address {
+class Address implements Serializable {
 
     @SerializedName("street")
     @Expose
@@ -171,7 +173,7 @@ class Address {
     }
 }
 
-class Geo {
+class Geo implements Serializable {
     @SerializedName("lat")
     @Expose
     private String latitude;
@@ -197,7 +199,7 @@ class Geo {
     }
 }
 
-class Company {
+class Company implements Serializable {
     @SerializedName("name")
     @Expose
     private String name;

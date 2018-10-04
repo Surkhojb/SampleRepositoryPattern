@@ -2,6 +2,7 @@ package com.example.surkhojb.samplerepositorypattern.data.repository;
 
 import com.example.surkhojb.samplerepositorypattern.data.remote.JsonPlaceHolderApi;
 import com.example.surkhojb.samplerepositorypattern.data.remote.RetrofitPlaceHolderService;
+import com.example.surkhojb.samplerepositorypattern.domain.Comment;
 import com.example.surkhojb.samplerepositorypattern.domain.Post;
 import com.example.surkhojb.samplerepositorypattern.domain.User;
 
@@ -28,5 +29,9 @@ public class AppRepository {
 
     public Call<List<User>> getListOfUsers() {
         return remoteSource.getListOfUsers();
+    }
+
+    public Call<List<Post>> getListOfPostsByUser(int userId) {
+        return remoteSource.getPotsByUser(userId);
     }
 }
